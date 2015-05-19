@@ -1,0 +1,42 @@
+﻿@model SchoolWebsite.Models.HousePoint
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HousePoint</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAwarded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAwarded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwardingTeacher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwardingTeacher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reason)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HousePointID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

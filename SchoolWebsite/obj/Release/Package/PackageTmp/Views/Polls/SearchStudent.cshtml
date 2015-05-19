@@ -1,0 +1,172 @@
+﻿@model IEnumerable<SchoolWebsite.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Student Search";
+
+    bool can_search_students = false;
+
+    List<string> roles = ViewBag.roles;
+
+    if(roles != null)
+    { 
+        foreach (string x in roles)
+        {
+            if (User.IsInRole(x))
+            {
+                can_search_students = true;
+            }
+        }
+    }
+}
+
+<h2>Student Search</h2>
+
+<!--
+    //pannels accordion default code
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <h4 class="panel-title">Search by username</h4>
+        </a>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+        </div>
+    </div>
+</div>
+-->
+
+@Html.ActionLink("List Roles", "Index", "Roles") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
+<hr />
+
+@if(can_search_students)
+{ 
+    <div class="panel-group" id="accordion">
+
+    @using (Html.BeginForm("SearchStudent", "Polls", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <h4 class="panel-title">Search by username</h4>
+                </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Editor("q", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Search" />
+                </div>
+            </div>
+        </div>
+    }
+
+    @using (Html.BeginForm("SearchByYear", "Polls"))
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <h4 class="panel-title">Search by year group</h4>
+                </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Editor("q", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Search" />
+                </div>
+            </div>
+        </div>
+    }
+
+    @using (Html.BeginForm("SearchByName", "Polls"))
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <h4 class="panel-title">Search by name</h4>
+                </a>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Editor("q", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Search" />
+                </div>
+            </div>
+        </div>
+    }
+
+    @using (Html.BeginForm("SearchByTutorGroup", "Polls"))
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <h4 class="panel-title">Search by tutor group</h4>
+                </a>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Editor("q", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Search" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+if (Model != null)
+{
+    <h2>Results</h2>
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th class="col col-md-3">Id</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Tutor group</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id.Substring(5).ToString() ...</td>
+                <td>@item.UserName</td>
+                <td>@item.Name</td>
+                <td>@item.Year</td>
+                <td>@item.TutorGroup</td>
+                <td>@Html.ActionLink("Manage user role", "ManageUserRoles", "Roles", new { q = @item.UserName }, null) </td>
+            </tr>
+        }
+    </table>
+}
+}
+else
+{
+    <label style="color:red;">You do not have the right to search students!</label>
+}
+
+<style>
+    .panel-heading .accordion-toggle h4:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings';
+        content: "\e114";
+        float: right;
+        color: grey;
+        overflow: no-display;
+    }
+
+    .panel-heading .accordion-toggle.collapsed h4:after {
+        /* symbol for "collapsed" panels */
+        content: "\e080";
+    }
+
+    a.accordion-toggle {
+        text-decoration: none;
+    }
+</style>
+

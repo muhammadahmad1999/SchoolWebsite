@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SchoolWebsite.Models.Vote>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PollID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CastedAt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CastedAt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VoteID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VoteID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VoteID })
+        </td>
+    </tr>
+}
+
+</table>

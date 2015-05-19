@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+
+    bool can_create = false;
+
+    List<string> roles = ViewBag.roles;
+
+    if (roles != null)
+    {
+        foreach (string x in roles)
+        {
+            if (User.IsInRole(x))
+            {
+                can_create = true;
+            }
+        }
+    }
+}
+
+<h2>Create Role</h2>
+@Html.ActionLink("List Roles", "Index") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
+<hr />
+
+@if(can_create)
+{
+    
+using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    
+    <div>
+        Role name
+    </div>
+    <p>
+        @Html.TextBox("RoleName")
+    </p>
+    <input type="submit" value="Save" />
+}
+}
+else
+{
+    <label style="color:red;">You do not have the right to create user roles!</label>
+}
+

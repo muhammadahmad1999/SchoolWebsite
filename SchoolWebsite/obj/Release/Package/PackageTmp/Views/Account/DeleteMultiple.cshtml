@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Delete Multiple Users";
+
+    bool can_delete = false;
+
+    List<string> roles = ViewBag.roles;
+
+    if (roles != null)
+    {
+        foreach (string x in roles)
+        {
+            if (User.IsInRole(x))
+            {
+                can_delete = true;
+            }
+        }
+    }
+}
+
+<h2>Delete Users</h2>
+
+@Html.ActionLink("Register a user", "Register")
+|
+@Html.ActionLink("Register multiple users", "RegisterMultiple")
+
+<br />
+<br />
+<label style="color:red;">@ViewBag.error_msg</label>
+<label style="color:forestgreen;">@ViewBag.success_msg</label>
+
+<hr />
+
+
+@if(can_delete)
+{ 
+
+<div class="panel-group" id="accordion">
+
+    @using (Html.BeginForm("DeleteMultiple", "Account", FormMethod.Post))
+    {
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <h4 class="panel-title">Delete users manually</h4>
+                </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                   @Html.Label("Enter usernames and seperate them using commas:")
+                    <br />
+                    @Html.Editor("user_str", new { htmlAttributes = new { @class = "form-control" } })
+                    <br/>
+                    <br/>
+                    <span onclick="return confirm('Are you sure you want to delete the above users?')">
+                        <input type="submit" class="btn btn-danger" value="Delete" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+
+    @using (Html.BeginForm("DeleteMultipleFromExcel", "Account", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <h4 class="panel-title">Delete users using excel lists</h4>
+                </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    @Html.Label("Filepath: ")
+                    <br />
+                    <input type="file" name="file" id="file" />
+                    <br />
+                    <span onclick="return confirm('Are you sure you want to delete the above users?')">
+                        <input type="submit" class="btn btn-danger" value="Delete" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+    <style>
+        .panel-heading .accordion-toggle h4:after {
+            /* symbol for "opening" panels */
+            font-family: 'Glyphicons Halflings';
+            content: "\e114";
+            float: right;
+            color: grey;
+            overflow: no-display;
+        }
+
+        .panel-heading .accordion-toggle.collapsed h4:after {
+            /* symbol for "collapsed" panels */
+            content: "\e080";
+        }
+
+        a.accordion-toggle {
+            text-decoration: none;
+        }
+    </style>
+
+}
+else
+{
+    <label style="color:red;">You do not have the right to delete users!</label>
+}

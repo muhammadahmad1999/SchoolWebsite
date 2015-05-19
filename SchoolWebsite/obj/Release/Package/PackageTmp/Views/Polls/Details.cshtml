@@ -1,0 +1,62 @@
+﻿@model SchoolWebsite.Models.PollDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Poll</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.poll.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poll.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poll.NumQuestions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poll.NumQuestions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poll.NumAnswers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poll.NumAnswers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poll.questions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poll.questions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poll.answers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poll.answers)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.poll.PollID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<br />
+<br />
+
+

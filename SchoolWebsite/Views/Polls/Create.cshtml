@@ -1,0 +1,347 @@
+﻿@model SchoolWebsite.Models.Poll
+
+@using SchoolWebsite.Models
+
+@{
+    ViewBag.Title = "Create";
+
+    bool can_create = false, create_all = false, create_tutor_group = false,
+        create_07 = false, create_08 = false, create_09 = false, 
+        create_10 = false, create_11 = false;
+
+    List<string> roles = ViewBag.roles;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            can_create = true;
+        }
+    }
+
+    roles = ViewBag.roles_all;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+           create_all = true;
+       }
+    }
+
+    roles = ViewBag.roles_tutor_group;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_tutor_group = true;
+        }
+    }
+
+    roles = ViewBag.roles_07;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_07 = true;
+        }
+    }
+
+    roles = ViewBag.roles_08;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_08 = true;
+        }
+    }
+
+    roles = ViewBag.roles_09;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_09 = true;
+        }
+    }
+
+    roles = ViewBag.roles_10;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_10 = true;
+        }
+    }
+
+    roles = ViewBag.roles_11;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            create_11 = true;
+        }
+    }
+
+
+    List<SelectListItem> list = new List<SelectListItem>();
+                       /*{
+                         //new SelectListItem {Text = "Tutor Group", Value = "TutorGroup"},
+                         //new SelectListItem {Text = "All", Value = "All"},
+                         //new SelectListItem {Text = "Year 7", Value = "Year:7"},
+                         new SelectListItem {Text = "Year 8", Value = "Year:8"},
+                         new SelectListItem {Text = "Year 9", Value = "Year:9"},
+                         new SelectListItem {Text = "Year 10", Value = "Year:10"},
+                         new SelectListItem {Text = "Year 11", Value = "Year:11"}
+                        // new SelectListItem {Text = "Sixth Form", Value = "SixthForm"}
+                       }; 
+   */
+    if(create_tutor_group)
+    {
+        list.Add(new SelectListItem { Text = "Tutor Group", Value = "TutorGroup" }); 
+    }
+    if(create_all)
+    {
+        list.Add(new SelectListItem {Text = "All", Value = "All"});
+    }                     
+    if(create_07)
+    {
+        list.Add(new SelectListItem {Text = "Year 7", Value = "Year:7"});
+    }                     
+    if(create_08)
+    {
+        list.Add(new SelectListItem { Text = "Year 8", Value = "Year:8" });
+    }                     
+    if(create_09)
+    {
+        list.Add(new SelectListItem { Text = "Year 9", Value = "Year:9" });
+    }                     
+    if(create_10)
+    {
+        list.Add(new SelectListItem { Text = "Year 10", Value = "Year:10" });
+    }                     
+    if(create_11)
+    {
+        list.Add(new SelectListItem { Text = "Year 11", Value = "Year:11" });
+    }                     
+    
+    //List<string> user_roles = ViewBag.user_roles;
+    
+    List<Answer> answer_list = new List<Answer>();
+    //IEnumerable<SelectListItem> can_create_for = ViewBag.can_create_for;
+}
+
+<h2>Create</h2>
+
+@if(can_create)
+{ 
+    using (Html.BeginForm())
+    {
+        Html.AntiForgeryToken();
+        
+        <div class="form-horizontal">
+            
+            <!--@Html.DropDownList("list", list)-->
+            @Html.ListBox("list", list)
+
+            <div class="form-group">
+                @Html.LabelFor(m => Model.Title)
+                <br />
+                <div class="col-md-10">
+                     @Html.EditorFor(m => Model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+     
+            <div id="divcust">
+
+            </div>
+            <div id="divdetails" class="form-group">
+                @Html.Hidden("num_questions", new { id = "num_questions" })
+            </div>
+            <br />
+            <br />
+            <input id="btnAdd" type="button" class="btn btn-default" value="Add Question" onclick="AddQuestion();" />
+            
+            <br />
+            <br />
+            @Html.AntiForgeryToken()
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    }
+<script>
+    var num_questions = 0;
+    var ques_index = -1;
+    var max_answer = [];
+    var elem;
+
+    function AddQuestion() {
+        num_questions += 1;
+        ques_index += 1;
+
+        var clear_fix = '<div class="clearfix" >        </div>'
+
+        var text = '@Html.Hidden("num_answersval")';
+        var label = '@Html.Label("Question val", new { id = "QuestionLabelval"})';
+        var div_text = '<div id="divquesval" class="form-group">';
+
+        var div_ques_btn = '<div id="divQuesBtns' + ques_index.toString() + '" class="col-md-10">';
+
+        var button_add_ans = '<br /><input id="btnAddAnswer' + ques_index.toString() + '" class="btn btn-default" type="button" value="Add Option" onclick="AddAnswer(' + ques_index + ');" />';
+        var button_add_other = '<br /><input id="btnAddOther' + ques_index.toString() + '" class="btn btn-default" type="button" value="Add Answer Box" onclick="AddOther(' + ques_index + ');" />';
+
+        var button_delete_ques = '<input id="btnDeleteQues' + ques_index.toString() + '" class="btn btn-default" type="button" value="Delete Question" onclick="DeleteQuestion(' + ques_index.toString() + ');" /> <br/><br/><br/>';
+
+        //var html = '<input id=\"CheckBox' + index + '\" class=\"chkclass\"' +
+        //' type=\"checkbox\" value=\"\" name=\" \">';
+        //CustList[' + index + '].Name
+
+        //new { id = "JSVar" })"
+
+        for (var i = 0; i < 2; i++) {
+            text = text.replace("val", ques_index);
+        }
+
+        for (var i = 0; i < 3; i++) {
+                label = label.replace("val", (ques_index + 1).toString());
+        }
+
+        var text2 = clear_fix + label + ' <br /> <div id = "divAnswerval" class = "col-md-10"> @Html.Editor("QuestionBoxval", new { htmlAttributes = new { @class = "form-control" } }) </div>';
+        for (var i = 0; i < 3; i++) {
+            text2 = text2.replace("val", ques_index);
+        }
+
+        div_text = div_text.replace("val", ques_index);
+
+       
+        var html = div_text + "<br />" + text + text2 + "</div>";
+
+        html += div_ques_btn + button_add_ans + button_add_other + '<br />' + button_delete_ques;
+
+        max_answer[ques_index] = 0;
+
+        $('#divcust').append(html);
+        $("#num_questions").val(num_questions);
+    };
+
+    function AddAnswer(ques_num) {
+
+        var text = '@Html.Editor("AnswerBoxquval", new { htmlAttributes = new { @class = "form-control" } })';
+        for (var i = 0; i < 2; i++) {
+            text = text.replace("qu", ques_num);
+            text = text.replace("val", max_answer[ques_num]);
+        }
+
+        //might also need to add new div
+        var label = '@Html.Label("Option val")'
+
+        for (var i = 0; i < 2; i++) {
+            label = label.replace("val", (max_answer[ques_num] + 1).toString());
+        }
+
+        var id = 'divAnswerBoxquval';
+        id = id.replace("qu", ques_num);
+        id = id.replace("val", max_answer[ques_num]);
+
+        var button_delete_ans = '<input id="btnDeleteAns' + ques_num.toString() + (max_answer[ques_num] + 1).toString() + '" class="btn btn-default" type="button" value="Delete Answer" onclick="DeleteAnswer(' + ques_index.toString() + ', ' + max_answer[ques_num] + ');" />' + '</div>';
+
+        var html = '<br id= "' + "brAnswerBox" + ques_num.toString() + max_answer[ques_num] + '" /> <div id = "' + id + '" class="col-md-10">' + label + text + '<br />' + button_delete_ans + '</div>';
+
+        var div_id = '#divquesval';
+        div_id = div_id.replace("val", ques_num);
+        var hidden_id = '#num_answersval';
+        hidden_id = hidden_id.replace("val", ques_num);
+
+
+        max_answer[ques_num] += 1;
+
+        $(div_id).append(html);
+        $(hidden_id).val(max_answer[ques_num]);
+    };
+
+    function AddOther(ques_num) {
+
+        var text = '@Html.Editor("Otherquval", new { htmlAttributes = new { @class = "form-control" } })';
+        for (var i = 0; i < 2; i++) {
+            text = text.replace("qu", ques_num);
+            text = text.replace("val", max_answer[ques_num]);
+        }
+
+        //might also need to add new div
+        var label = '@Html.Label("Other val")'
+
+        for (var i = 0; i < 2; i++) {
+            label = label.replace("val", (max_answer[ques_num] + 1).toString());
+        }
+
+        var id = 'divOtherquval';
+        id = id.replace("qu", ques_num);
+        id = id.replace("val", max_answer[ques_num]);
+
+        var button_delete_opt = '<input id="btnDeleteOther' + ques_num.toString() + (max_answer[ques_num] + 1).toString() + '" class="btn btn-default" type="button" value="Delete Answer Box" onclick="DeleteOther(' + ques_index.toString() + ', ' + max_answer[ques_num] + ');" />' + '</div>';
+
+        var html = '<br id= "' + "brOther" + ques_num.toString() + max_answer[ques_num] + '" /> <div id = "' + id + '" class="col-md-10">' + label + text + '<br />' + button_delete_opt + '</div>';
+
+        var div_id = '#divquesval';
+        div_id = div_id.replace("val", ques_num);
+        var hidden_id = '#num_answersval';
+        hidden_id = hidden_id.replace("val", ques_num);
+
+
+        max_answer[ques_num] += 1;
+
+        $(div_id).append(html);
+        $(hidden_id).val(max_answer[ques_num]);
+    };
+
+    function DeleteQuestion(ques_num) {
+        id = "divques" + ques_num.toString();
+        remove(id);
+
+        id = "divQuesBtns" + ques_num.toString();
+        remove(id);
+
+        num_questions -= 1;
+        ques_index -= 1;
+        max_answer[ques_num] = 0;
+
+    };
+
+    function DeleteAnswer(ques_num, ans_num) {
+        var id = "divAnswerBox" + ques_num + ans_num;
+        remove(id);
+
+        id = "brAnswerBox" + ques_num + ans_num;
+        remove(id);
+
+        max_answer[ques_num] -= 1;
+    };
+
+    function DeleteOther(ques_num, ans_num) {
+        var id = "divOther" + ques_num + ans_num;
+        remove(id);
+
+        id = "brOther" + ques_num + ans_num;
+        remove(id);
+
+        max_answer[ques_num] -= 1;
+    };
+
+    function remove(id) {
+        return (elem = document.getElementById(id)).parentNode.removeChild(elem);
+    };
+
+</script>
+
+}
+else
+{
+    <label style="color:red;">You do not have permission to create a poll!</label>
+}
+
+

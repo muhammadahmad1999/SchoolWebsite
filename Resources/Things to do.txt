@@ -1,0 +1,76 @@
+Things to do:
+-implement vote couinting using sql query - done
+-implement one-vote system - done
+-implement vote results system - simple - detail -etc
+-implement vote results by year group - done
+-implement user roles - done
+
+-search users - done
+	- by name
+	- by year
+	- by tutor group
+
+-search polls
+	- by name
+	- by year
+	- by tutor group
+
+-only display polls that you have not participated in - done
+
+-participation results per student
+	- per tutor group
+	- per year group
+	- per key stage
+	- overall performace report
+
+- Password change send user key code to email. UserManager.GeneratePasswordResetTokenAsync
+
+Role system:
+	- Dynamically give roles authority and power, i.e. using forms etc
+
+-add question titles to chart - done
+_Amaad2010
+-renaisence learning record addon
+-reminding service: send emails to student about what they have this month
+
+- get list of users who have a specific role
+
+- allow students to associate an image with their account
+
+- if user role name changes, change it also in config database
+
+-House point system
+- House events system
+- prfect system
+
+- Create report system - veryyyyyy important
+	- who are part of what role
+	- poll report for specific time
+	- poll participation report
+		- chart to image http://www.chartjs.org/docs/#advanced-usage-prototype-methods
+		 prototype methods
+
+-restrict who can view poll results
+
+- prefect system
+	- online record of activites
+		- get report over a specific period of time
+	- online reporting system - i.e. complain about students
+		- email to head of house
+
+
+- search multiple students
+- Poll participation report for a specific period of time
+- allow poll for multiple year groups to be created - Done
+- do not accept poll without full data 
+
+Good code bit:
+
+StringBuilder sb = new StringBuilder();
+sb.Append(“You selected – “ + string.Join(“,”, selectedCities));
+
+
+
+****************************************************************************************
+Add tooltips for help on functions of website - use bootstrap tooltips
+****************************************************************************************

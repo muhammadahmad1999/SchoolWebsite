@@ -1,0 +1,152 @@
+﻿@model SchoolWebsite.Models.PollResults
+
+@{
+    ViewBag.Title = "ResultsSimple";
+}
+
+<script src="~/Scripts/Chart.js"></script>
+
+<h2>Poll Results</h2>
+
+
+<div id ="main">
+    <h4>Poll</h4>
+    <h5>Poll ID: @Model.poll.PollID</h5>
+    <h5>The poll was initiated at @Model.poll.CreatedOn</h5>
+    <hr />
+        @{int ques_id = 0, answer_id_num = 0, other_id_num = 0, answer_index = 0;}
+        @foreach (string question in Model.questions)
+        {
+
+            //Answer_id_num is the id for each other box, not option box because id is not required
+            @Html.Label(question, new { id = "Question" + ques_id })
+
+            answer_id_num = 0;
+            other_id_num = 0;
+            for (int j = answer_index; j < 100; j++)
+            {
+
+                if (j > Model.poll.NumAnswers)
+                {
+                    break;
+                }
+                else
+                {
+                    if (Model.answers.GetValue(j).ToString() == "null")
+                    {
+                        //answer_index = j + 1;
+                        answer_index = j + 1;
+                        //num_answer--;
+                        answer_id_num--;
+                        break;
+                    }
+                    else if (Model.answers.GetValue(j).ToString() != "other")
+                    {
+                        // <p>@Model.answers.GetValue(j)</p>
+
+                        string answer = Model.answers.GetValue(j).ToString();
+                        var check_substr = answer.Substring(0, 5);
+                        if (check_substr == "check")
+                        {
+                            var answer_id = "Answer" + answer_id_num.ToString();
+                            answer = answer.Remove(0, 5);
+                            @Html.Label(answer, new { id = "Answer" + ques_id + answer_id_num })
+                            <br />
+                            <label>@Html.Label(Model.votes.GetValue(j).ToString(), new { id = "Label" + ques_id + answer_id_num })</label>
+                        }
+                    }
+                    else if (Model.answers.GetValue(j).ToString() == "other")
+                    {
+                        answer_id_num--;
+                    }
+                }
+
+                answer_id_num++;
+                //num_answer++;
+
+            }
+
+            string hidden_id = "num_answer_ques" + ques_id;
+
+            //<input type="hidden" id="@hidden_id" name="@answer_id_num" value="@answer_id_num"/>
+
+            @Html.Label((answer_id_num + 1).ToString(), (answer_id_num + 1).ToString(), new { id = hidden_id })
+
+
+            ques_id++;
+        }
+</div>
+
+@for (int o = 0; o < ques_id; o++ )
+{ 
+    string id = "Chart" + o.ToString();
+    <div class="clearfix" />
+        
+    @Html.Label("Question " + (o + 1).ToString() + ":    " + Model.questions[o].ToString())
+    <div class="clearfix" />
+    <canvas id="@id" width="200" height="200"></canvas>
+    
+}
+<script>
+
+    var num_ques = @Model.poll.NumQuestions;
+
+   
+    for (var i = 0; i < num_ques; i++)
+    {
+        var num_answer = document.getElementById("num_answer_ques" + i.toString()).innerText;
+      
+        document.getElementById("num_answer_ques" + i.toString()).style.display = "none";
+
+        var datasets = [];
+        var labels = [];
+
+        var votes_values_array = [];
+        for (var j = 0; j < num_answer; j++)
+        {
+            labels[j] = document.getElementById("Answer" + i.toString() + j.toString()).innerHTML;
+           
+            document.getElementById("Answer" + i.toString() + j.toString()).style.display = "none";
+            
+            votes_values_array[j] = document.getElementById("Label" + i.toString() + j.toString()).innerHTML;
+            document.getElementById("Label" + i.toString() + j.toString()).style.display = "none";
+        }
+
+        datasets.push({
+            label: "Dataset",
+            fillColor: "rgba(151,0,0,0.5)",
+            strokeColor: "rgba(151,0,0,0.8)",
+            highlightFill: "rgba(200,0,0,0.75)",
+            highlightStroke: "rgba(200,0,0,1)",
+            data: votes_values_array
+        });
+
+        var graphData = {
+            labels: labels,
+            datasets: datasets
+        }
+
+        var ctx = document.getElementById("Chart" + i.toString()).getContext("2d");
+
+        ctx.width = 200;
+        ctx.height = 200;
+
+        if(devicePixelRatio < 10)
+        {
+            var myBarChart = new Chart(ctx).Bar(graphData, {
+                barShowStorke: true
+            });
+        }
+        else
+        {
+            var myBarChart = new Chart(ctx).Bar(graphData, {
+                
+            });
+        }
+
+
+        document.getElementById("Question" + i.toString()).style.display = "none";
+        document.getElementById("main").style.display = "none";
+    }
+
+</script>

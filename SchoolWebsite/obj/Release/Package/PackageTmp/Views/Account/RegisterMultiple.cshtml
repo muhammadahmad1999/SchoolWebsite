@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Register Multiple Users";
+
+    bool can_create = false;
+
+    List<string> roles = ViewBag.roles;
+
+    if (roles != null)
+    {
+        foreach (string x in roles)
+        {
+            if (User.IsInRole(x))
+            {
+                can_create = true;
+            }
+        }
+    }
+
+    var list = ViewBag.Roles_available;
+
+}
+
+<h2>Register Multiple Users</h2>
+
+@Html.ActionLink("Register a user", "Register")
+|
+@Html.ActionLink("Delete users", "DeleteMultiple")
+
+<br />
+<br />
+
+<label style="color:red;">@ViewBag.error_msg</label>
+<label style="color:forestgreen;">@ViewBag.success_msg</label>
+
+<hr />
+
+@if(can_create)
+{
+
+    using (Html.BeginForm("RegisterMultiple", "Account", FormMethod.Post, new {@enctype = "multipart/form-data"}))
+    {
+        @Html.Label("Role Name:");
+        <br/>
+        @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)list, "Select ...", new { htmlAttributes = new { @class = "form-control" } });
+        <br />
+    <br />
+
+            @Html.Label("Filepath: ")
+            <br />
+            <input type="file" name="file" id="file" />
+            <br />
+
+            <span onclick="return confirm('Are you sure you want to register the above users?')">
+                <input type="submit" class="btn btn-success" value="Register" />
+            </span>
+            }
+            }
+            else
+            {
+            <label style="color:red;">You do not have the right to create new users!</label>
+            }
+

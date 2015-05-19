@@ -1,0 +1,166 @@
+﻿@model SchoolWebsite.Models.IndexViewModel
+@using SchoolWebsite.Models
+@{
+    ViewBag.Title = "Manage";
+    ApplicationUser user = ViewBag.user;
+}
+
+<h2>@ViewBag.Title.</h2>
+
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div class="panel-group" id="accordion">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <h4 class="panel-title">Your account details</h4>
+            </a>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Username:
+                    </dt>
+                    <dd>
+                        @user.UserName
+                    </dd>
+
+                    <dt>
+                        Name:
+                    </dt>
+                    <dd>
+                        @user.Name
+                    </dd>
+                     
+                    <dt>
+                        Year group:
+                    </dt>
+                    <dd>
+                        @user.Year
+                    </dd>
+                     <dt>
+                         Tutor group:
+                     </dt>
+                    <dd>
+                        @user.TutorGroup
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                <h4 class="panel-title">Change your account settings</h4>
+            </a>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Password:</dt>
+                    <dd>
+                        [
+                        @if (Model.HasPassword)
+                        {
+                            @Html.ActionLink("Change your password", "ChangePassword")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Create", "SetPassword")
+                        }
+                        ]
+                    </dd>
+                    <dt>External Logins:</dt>
+                    <dd>
+                        @Model.Logins.Count [
+                        @Html.ActionLink("Manage", "ManageLogins") ]
+                    </dd>
+
+                    <dt>User details:</dt>
+                    <dd>
+                        @Html.ActionLink("Edit", "Edit", "Account")
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    @*
+        Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+
+         See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+            for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+
+         Uncomment the following block after you have set up two-factor authentication
+    *@
+    @*
+        <dt>Phone Number:</dt>
+        <dd>
+            @(Model.PhoneNumber ?? "None") [
+            @if (Model.PhoneNumber != null)
+            {
+                @Html.ActionLink("Change", "AddPhoneNumber")
+                @: &nbsp;|&nbsp;
+                @Html.ActionLink("Remove", "RemovePhoneNumber")
+            }
+            else
+            {
+                @Html.ActionLink("Add", "AddPhoneNumber")
+            }
+            ]
+        </dd>
+    *@
+    <!--
+    <dt>Two-Factor Authentication:</dt>
+    <dd>
+        <p>
+            There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+            for details on setting up this ASP.NET application to support two-factor authentication.
+        </p>
+        @*@if (Model.TwoFactor)
+            {
+                using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <text>Enabled
+                    <input type="submit" value="Disable" class="btn btn-link" />
+                    </text>
+                }
+            }
+            else
+            {
+                using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <text>Disabled
+                    <input type="submit" value="Enable" class="btn btn-link" />
+                    </text>
+                }
+            }*@
+    </dd>
+        -->
+    </dl>
+</div>
+
+<style>
+    .panel-heading .accordion-toggle h4:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings';
+        content: "\e114";
+        float: right;
+        color: grey;
+        overflow: no-display;
+    }
+
+    .panel-heading .accordion-toggle.collapsed h4:after {
+        /* symbol for "collapsed" panels */
+        content: "\e080";
+    }
+
+    a.accordion-toggle {
+        text-decoration: none;
+    }
+</style>

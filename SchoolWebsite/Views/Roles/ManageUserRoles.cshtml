@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "ManageUserRoles";
+
+    bool can_change_roles = false;
+
+    List<string> roles = ViewBag.roles_allowed;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            can_change_roles = true;
+        }
+    }
+}
+
+<h2>Manage User Roles</h2>
+@Html.ActionLink("Create New Role", "Create") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
+<hr />
+
+@if(can_change_roles)
+{ 
+<div class="panel-group" id="accordion">
+    @using (Html.BeginForm("RoleAddToUser", "Roles"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <h4 class="panel-title">Add a role to a user</h4>
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Username : @Html.Editor("UserName", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <br />
+                    <input type="submit" value="Add role" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @using (Html.BeginForm("GetRoles", "Roles"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <h4 class="panel-title">Get roles for this student</h4>
+                </a>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Username : @Html.Editor("UserName", new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="clearfix" />
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Get roles for this student" />
+
+                    <br />
+                    <br />
+                    @if (ViewBag.RolesForThisUser != null)
+                    {
+                        <div style="background-color:yellow;">
+                            <h3>Roles for this user </h3>
+                            <ol>
+                                @foreach (string s in ViewBag.RolesForThisUser)
+                                {
+                                    <li>@s</li>
+                                }
+                            </ol>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    @using (Html.BeginForm("DeleteRoleForUser", "Roles"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <h4 class="panel-title">Deprive the student the above role</h4>
+                </a>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Username : @Html.Editor("UserName", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...", new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <br />
+                    <input type="submit" value="Remove role" class="btn btn-danger" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+}
+else
+{
+    <label style="color:red;">You do not have the right to change user roles!</label>
+}
+
+<style>
+    .panel-heading .accordion-toggle h4:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings';
+        content: "\e114";
+        float: right;
+        color: grey;
+        overflow: no-display;
+    }
+
+    .panel-heading .accordion-toggle.collapsed h4:after {
+        /* symbol for "collapsed" panels */
+        content: "\e080";
+    }
+
+    a.accordion-toggle {
+        text-decoration: none;
+    }
+</style>

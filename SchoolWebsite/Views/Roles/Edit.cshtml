@@ -1,0 +1,145 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Edit";
+
+    bool can_edit = false;
+
+    List<string> roles = ViewBag.roles;
+
+    foreach (string x in roles)
+    {
+        if (User.IsInRole(x))
+        {
+            can_edit = true;
+        }
+    }
+}
+
+<h2>Edit Role</h2>
+@Html.ActionLink("Create New Role", "Create") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
+<hr />
+
+@if(can_edit)
+{ 
+<div class="panel-group" id="accordion">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true);
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <h4 class="panel-title">Change role details</h4>
+                </a>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+
+                    Role name
+                    <br />
+                    <br />
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    <br />
+                    <input type="submit" class="btn btn-success" value="Save" />
+                </div>
+            </div>
+        </div>
+    }
+
+    @using (Html.BeginForm("UpdatePowers", "Roles", FormMethod.Post))
+    {
+        @Html.Hidden("RoleName", Model.Name)
+        
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true);
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <h4 class="panel-title">Change role powers</h4>
+                </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+
+
+                    <strong>Polling System</strong>
+                    <br />
+
+                    @Html.CheckBox("CreatePolls") Can create polls <br />
+                    @Html.CheckBox("EditPolls") Can edit polls <br />
+                    @Html.CheckBox("DeletePolls") Can delete polls <br />
+                    @Html.CheckBox("ViewAllPolls") Can view all polls <br />
+                    <br />
+                    <label>Who can they create polls for? :</label><br />
+                    @Html.CheckBox("Create07") Year 7 <br />
+                    @Html.CheckBox("Create08") Year 8 <br />
+                    @Html.CheckBox("Create09") Year 9 <br />
+                    @Html.CheckBox("Create10") Year 10 <br />
+                    @Html.CheckBox("Create11") Year 11 <br />           
+                    @Html.CheckBox("CreateAll") All <br />
+                    @Html.CheckBox("CreateTutorGroup") Tutor Group <br />
+                    <br/>
+
+                    <strong>Student Search System</strong>
+                    <br />
+
+                    @Html.CheckBox("SearchStudents") Can search students, allowing him to view their information <br />
+                    <br />
+
+                    <strong>Role system</strong>
+                    <br />
+
+                    @Html.CheckBox("CreateRoles") Can create roles <br />
+                    @Html.CheckBox("EditRoles") Can edit roles, allowing him to change the powers associated with a certain role <br />
+                    @Html.CheckBox("DeleteRoles") Can delete roles <br />
+                    @Html.CheckBox("ChangeRoles") Can change user roles <br />
+                    <br />
+
+                    <strong>Account system</strong>
+                    <br />
+
+                    @Html.CheckBox("CreateUsers") Can create users <br />
+                    @Html.CheckBox("DeleteUsers") Can delete users <br />
+                    <br />
+
+                    <span onclick="return confirm('Are you sure you want to update powers associated with this role?')">
+                        <input type="submit" class="btn btn-success" value="Update" />
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>
+
+
+}
+else
+{
+    <label style="color:red;">You do not have the right to edit user roles!</label>
+}
+<style>
+    .panel-heading .accordion-toggle h4:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings';
+        content: "\e114";
+        float: right;
+        color: grey;
+        overflow: no-display;
+    }
+
+    .panel-heading .accordion-toggle.collapsed h4:after {
+        /* symbol for "collapsed" panels */
+        content: "\e080";
+    }
+
+    a.accordion-toggle {
+        text-decoration: none;
+    }
+</style>

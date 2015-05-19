@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SchoolWebsite.Models.Poll>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("History", "PollHistory")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumQuestions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumAnswers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.questions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.answers)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumQuestions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumAnswers)
+            </td>
+
+            @{  if (item.questions.Length > 9)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.questions).ToString().Substring(0, 10)
+                        ...
+                    </td>
+                }
+                else
+                {
+                      <td>
+                        @Html.DisplayFor(modelItem => item.questions)...
+                    </td>
+                }
+            }
+
+            <td>
+                @Html.DisplayFor(modelItem => item.answers).ToString().Substring(0, 10) ...
+            </td>
+            <td>
+                @Html.ActionLink("Participate", "Participate", new { id = item.PollID }) |
+                @Html.ActionLink("Results", "Results", new { id = item.PollID }) 
+            </td>
+        </tr>
+    }
+</table>

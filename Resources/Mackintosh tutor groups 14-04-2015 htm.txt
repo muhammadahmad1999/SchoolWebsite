@@ -1,0 +1,246 @@
+Registration Group List : Mackintosh Miss J Catnach as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Binovskis, Aksels"	Male	12/05/2002	Year 08	Mackintosh Miss J Catnach
+"Burling, James"	Male	03/10/2002	Year 07	Mackintosh Miss J Catnach
+"Cant, Joseph"	Male	28/04/2003	Year 07	Mackintosh Miss J Catnach
+"Capontes, Nuno"	Male	28/12/2002	Year 07	Mackintosh Miss J Catnach
+"Charley, Thomas"	Male	07/09/2001	Year 08	Mackintosh Miss J Catnach
+"Duggan, Daniel"	Male	23/09/2000	Year 09	Mackintosh Miss J Catnach
+"Durham, Rian"	Male	02/12/2000	Year 09	Mackintosh Miss J Catnach
+"Dwyer, Amaron"	Male	27/02/2002	Year 08	Mackintosh Miss J Catnach
+"Ferguson, Aaron"	Male	11/05/2000	Year 10	Mackintosh Miss J Catnach
+"Fielding, Leona"	Female	17/09/1999	Year 10	Mackintosh Miss J Catnach
+"Gallacher, Cain"	Male	30/12/2001	Year 08	Mackintosh Miss J Catnach
+"Hare, Casey"	Male	08/11/2001	Year 08	Mackintosh Miss J Catnach
+"Johnson, Bradley"	Male	02/12/2001	Year 08	Mackintosh Miss J Catnach
+"Kenny, Tyler"	Male	09/05/2000	Year 10	Mackintosh Miss J Catnach
+"Kimberley, Oskar"	Male	27/03/2003	Year 07	Mackintosh Miss J Catnach
+"Lane, Nathan"	Male	20/10/2000	Year 09	Mackintosh Miss J Catnach
+"Moore, Kaitlyn"	Female	25/08/2001	Year 09	Mackintosh Miss J Catnach
+"Muirhead, Lucy"	Female	04/04/2001	Year 09	Mackintosh Miss J Catnach
+"Sadkeviciute, Emilia"	Female	17/05/1999	Year 10	Mackintosh Miss J Catnach
+"Sandison, Callum"	Male	06/10/2000	Year 09	Mackintosh Miss J Catnach
+"Scorer, Sophie"	Female	22/06/2000	Year 10	Mackintosh Miss J Catnach
+"Smith, Olly"	Male	01/09/2001	Year 08	Mackintosh Miss J Catnach
+"Stewardson, Benjamin"	Male	01/12/2000	Year 09	Mackintosh Miss J Catnach
+"Tarver, Kieran"	Male	31/01/2003	Year 07	Mackintosh Miss J Catnach
+"Valuckis, Arnas"	Male	01/05/2000	Year 10	Mackintosh Miss J Catnach
+"Wright, Harley"	Male	19/07/2003	Year 07	Mackintosh Miss J Catnach
+Males: 21 Females : 5				
+				
+Registration Group List : Mackintosh Miss L Easter as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Ballaam, Conor"	Male	13/09/2001	Year 08	Mackintosh Miss L Easter
+"Birch, Ryan"	Male	14/09/2000	Year 09	Mackintosh Miss L Easter
+"Boyle, Jack"	Male	21/12/2000	Year 09	Mackintosh Miss L Easter
+"Brown, Kaitlin"	Female	04/03/2003	Year 07	Mackintosh Miss L Easter
+"Courtman, Ehren"	Male	13/07/2000	Year 10	Mackintosh Miss L Easter
+"Davies, Ben"	Male	09/06/2003	Year 07	Mackintosh Miss L Easter
+"Doughty, Joe"	Male	07/11/2002	Year 07	Mackintosh Miss L Easter
+"Ferguson, Cam"	Male	14/02/2002	Year 08	Mackintosh Miss L Easter
+"Gibson, Jake"	Male	07/02/2002	Year 08	Mackintosh Miss L Easter
+"Gilbert, Cerys"	Female	13/02/2002	Year 08	Mackintosh Miss L Easter
+"Hanratty, Lloyd"	Male	10/11/1999	Year 10	Mackintosh Miss L Easter
+"Kavanagh, Paige"	Female	05/07/2000	Year 10	Mackintosh Miss L Easter
+"Malley, Reece"	Male	13/08/2000	Year 10	Mackintosh Miss L Easter
+"McBride, Liam"	Male	05/05/2001	Year 09	Mackintosh Miss L Easter
+"McMillan, Paige"	Female	10/08/2003	Year 07	Mackintosh Miss L Easter
+"Milne, Ellie"	Female	13/07/2001	Year 09	Mackintosh Miss L Easter
+"Musson, Kane"	Male	01/05/2003	Year 07	Mackintosh Miss L Easter
+"Pacey, Chloe"	Female	28/07/2001	Year 09	Mackintosh Miss L Easter
+"Prince, Joshua"	Male	09/08/2003	Year 07	Mackintosh Miss L Easter
+"Smith, Thomas R"	Male	25/03/2000	Year 10	Mackintosh Miss L Easter
+"Stockdale, Chyna"	Female	07/02/2001	Year 09	Mackintosh Miss L Easter
+"Storey, Harry"	Male	28/01/2002	Year 08	Mackintosh Miss L Easter
+"Swain, William"	Male	01/04/2000	Year 10	Mackintosh Miss L Easter
+"Thulborn, Misty"	Female	12/03/2002	Year 08	Mackintosh Miss L Easter
+"Wrigglesworth, Grace"	Female	01/08/2000	Year 10	Mackintosh Miss L Easter
+Males: 16 Females : 9				
+				
+Registration Group List : Mackintosh Mr N Brand as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Almeida, Joao"	Male	17/06/2002	Year 08	Mackintosh Mr N Brand
+"Askew, Bethany"	Female	03/07/2000	Year 10	Mackintosh Mr N Brand
+"Ballaam, Keanan"	Male	05/03/2000	Year 10	Mackintosh Mr N Brand
+"Brewster, Jack"	Male	30/11/2000	Year 09	Mackintosh Mr N Brand
+"Brooks, Jamie"	Male	19/01/2000	Year 10	Mackintosh Mr N Brand
+"Courtman, Sam"	Male	19/09/2002	Year 07	Mackintosh Mr N Brand
+"Crowley, Harry"	Male	05/11/2000	Year 09	Mackintosh Mr N Brand
+"Fairbairn, Alfie"	Male	02/06/2003	Year 07	Mackintosh Mr N Brand
+"Goodband, Tyson"	Male	24/03/2003	Year 07	Mackintosh Mr N Brand
+"Goodwin, Daniel"	Male	04/11/1999	Year 10	Mackintosh Mr N Brand
+"Grajewski, Oskar"	Male	23/11/1999	Year 10	Mackintosh Mr N Brand
+"Harris, Erin"	Female	28/08/2003	Year 07	Mackintosh Mr N Brand
+"Harrison-Higgs, Ryan"	Male	13/03/2002	Year 08	Mackintosh Mr N Brand
+"Horton, Tyler"	Male	20/04/2001	Year 09	Mackintosh Mr N Brand
+"Lappin, Oliver"	Male	24/10/2000	Year 09	Mackintosh Mr N Brand
+"Mahmood, Hamid"	Male	13/05/2001	Year 09	Mackintosh Mr N Brand
+"McKinlay, James"	Male	30/06/2002	Year 08	Mackintosh Mr N Brand
+"Medina, Morgan"	Male	23/11/2001	Year 08	Mackintosh Mr N Brand
+"Moorhouse, Abi"	Female	06/10/2001	Year 08	Mackintosh Mr N Brand
+"Olalere, Praise"	Male	28/12/2000	Year 09	Mackintosh Mr N Brand
+"Patel, Darshan"	Male	15/05/2001	Year 09	Mackintosh Mr N Brand
+"Scorer, Chloe"	Female	22/06/2000	Year 10	Mackintosh Mr N Brand
+"Sinclair, Jade"	Female	25/11/2001	Year 08	Mackintosh Mr N Brand
+"THOMPSON, Molly"	Female	07/02/2003	Year 07	Mackintosh Mr N Brand
+"TOWSEY, Amy"	Female	09/07/2003	Year 07	Mackintosh Mr N Brand
+"Wilkinson, Jordan"	Male	20/02/2001	Year 09	Mackintosh Mr N Brand
+"Zajac, Jakub"	Male	20/09/2002	Year 07	Mackintosh Mr N Brand
+Males: 20 Females : 7				
+				
+Registration Group List : Mackintosh Ms S Lynch as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Ahmad, Muhammad"	Male	26/12/1999	Year 10	Mackintosh Ms S Lynch
+"Alves, Ricardo"	Male	29/04/2000	Year 10	Mackintosh Ms S Lynch
+"Askew, Reece"	Male	07/11/2002	Year 07	Mackintosh Ms S Lynch
+"Bungay, Connor"	Male	25/08/2002	Year 08	Mackintosh Ms S Lynch
+"Cant, Jacob"	Male	22/09/2000	Year 09	Mackintosh Ms S Lynch
+"Corby, Joshua"	Male	30/12/2002	Year 07	Mackintosh Ms S Lynch
+"Durham, Ciaran"	Male	02/12/2000	Year 09	Mackintosh Ms S Lynch
+"Fielding, Daniel"	Male	17/09/1999	Year 10	Mackintosh Ms S Lynch
+"Gindrenas, Lukas"	Male	29/04/2000	Year 10	Mackintosh Ms S Lynch
+"Hubbard, Lewis"	Male	30/04/2000	Year 10	Mackintosh Ms S Lynch
+"Kujawa, Barbara"	Female	05/11/2001	Year 08	Mackintosh Ms S Lynch
+"Lynch, Brandon"	Male	16/11/2002	Year 07	Mackintosh Ms S Lynch
+"Moorhouse, Grace"	Female	10/01/2003	Year 07	Mackintosh Ms S Lynch
+"Muxlow, Toby"	Male	18/08/2003	Year 07	Mackintosh Ms S Lynch
+"Newman, Jack"	Male	08/07/2002	Year 08	Mackintosh Ms S Lynch
+"Nowak, Jakub"	Male	24/07/2002	Year 08	Mackintosh Ms S Lynch
+"Partridge, Alex"	Male	25/05/2000	Year 10	Mackintosh Ms S Lynch
+"Pearce-Foston, Joshua"	Male	09/06/2003	Year 07	Mackintosh Ms S Lynch
+"Perrin, Max"	Male	11/01/2002	Year 08	Mackintosh Ms S Lynch
+"Price, Jordan"	Male	25/09/1999	Year 10	Mackintosh Ms S Lynch
+"Santhakumar, Reena"	Female	01/12/2002	Year 07	Mackintosh Ms S Lynch
+"Skoyles, Ashweyn"	Male	01/11/2000	Year 09	Mackintosh Ms S Lynch
+"Spiers, Brandon"	Male	21/02/2001	Year 09	Mackintosh Ms S Lynch
+"Swain, Abigail"	Female	15/08/2002	Year 08	Mackintosh Ms S Lynch
+"Wilkinson, Lewis"	Male	20/02/2001	Year 09	Mackintosh Ms S Lynch
+Males: 21 Females : 4				
+				
+Registration Group List : Mackintosh Miss S Nokes as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Aldous, Matthew"	Male	21/12/1999	Year 10	Mackintosh Miss S Nokes
+"Bataitene, Aureja"	Female	07/06/2001	Year 09	Mackintosh Miss S Nokes
+"Bolland, Jack"	Male	24/02/2002	Year 08	Mackintosh Miss S Nokes
+"Brewster, Chloe"	Female	01/02/1999	Year 10	Mackintosh Miss S Nokes
+"Draycott, Zak"	Male	15/12/2002	Year 07	Mackintosh Miss S Nokes
+"Fitt, Lewis"	Male	01/02/2000	Year 10	Mackintosh Miss S Nokes
+"Foalks, Caitlin"	Female	01/09/2000	Year 09	Mackintosh Miss S Nokes
+"Haude, Georgina"	Female	04/01/2000	Year 10	Mackintosh Miss S Nokes
+"Loveless, Leaha"	Female	21/10/2001	Year 08	Mackintosh Miss S Nokes
+"Marshall, Adam"	Male	16/05/2003	Year 07	Mackintosh Miss S Nokes
+"McAuliffe, Heidi"	Female	27/04/2000	Year 10	Mackintosh Miss S Nokes
+"Milner, Rosie"	Female	27/02/2002	Year 08	Mackintosh Miss S Nokes
+"Moore, Daniel"	Male	03/09/2000	Year 09	Mackintosh Miss S Nokes
+"PAGE, Catherine"	Female	28/10/2002	Year 07	Mackintosh Miss S Nokes
+"Papworth, Amelia"	Female	05/06/2003	Year 07	Mackintosh Miss S Nokes
+"Parkes, Declan"	Male	20/03/2002	Year 08	Mackintosh Miss S Nokes
+"Pavlik, Valentyna"	Female	14/02/2000	Year 10	Mackintosh Miss S Nokes
+"Rudcenko, Maksim"	Male	12/08/2003	Year 07	Mackintosh Miss S Nokes
+"Rutka, Kacper"	Male	28/01/2000	Year 09	Mackintosh Miss S Nokes
+"Sharples, Courtney"	Female	31/10/2000	Year 09	Mackintosh Miss S Nokes
+"Smith, Anthony"	Male	22/01/2000	Year 10	Mackintosh Miss S Nokes
+"Smith, Holly"	Female	06/05/2002	Year 08	Mackintosh Miss S Nokes
+"Smith, Kieran"	Male	09/06/2001	Year 09	Mackintosh Miss S Nokes
+"Smith, Thomas D"	Male	25/10/1999	Year 10	Mackintosh Miss S Nokes
+"Sumner, Tommy"	Male	15/08/2003	Year 07	Mackintosh Miss S Nokes
+"Whotton, Lewis"	Male	13/03/2002	Year 08	Mackintosh Miss S Nokes
+"Zajac, Natalia"	Female	02/06/2000	Year 10	Mackintosh Miss S Nokes
+Males: 14 Females : 13				
+				
+Registration Group List : Mackintosh Mr A Griffiths as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Bolland, Tia"	Female	06/01/2003	Year 07	Mackintosh Mr A Griffiths
+"Bradley, Kyle"	Male	21/06/2002	Year 08	Mackintosh Mr A Griffiths
+"Church, Riley"	Male	08/05/2002	Year 08	Mackintosh Mr A Griffiths
+"Clark, Charlie"	Male	11/04/2000	Year 10	Mackintosh Mr A Griffiths
+"Collier-afifi, Dylan"	Male	03/11/2002	Year 07	Mackintosh Mr A Griffiths
+"Drevinskas, Deivis"	Male	19/01/2003	Year 07	Mackintosh Mr A Griffiths
+"Eveleigh, Tommy"	Male	06/09/2001	Year 08	Mackintosh Mr A Griffiths
+"Fendley, Brandon"	Male	05/12/2000	Year 09	Mackintosh Mr A Griffiths
+"Johnson, Kiera"	Female	05/06/2001	Year 09	Mackintosh Mr A Griffiths
+"Lowis, Lauren"	Female	15/01/2003	Year 07	Mackintosh Mr A Griffiths
+"Morley, James"	Male	14/01/2002	Year 08	Mackintosh Mr A Griffiths
+"Murphy, Jason"	Male	18/10/2000	Year 09	Mackintosh Mr A Griffiths
+"Smith, Chelsea"	Female	07/10/2000	Year 09	Mackintosh Mr A Griffiths
+"Stewardson, Finlay James Melville"	Male	12/07/2002	Year 08	Mackintosh Mr A Griffiths
+"Susters, Ernests"	Male	24/03/2000	Year 10	Mackintosh Mr A Griffiths
+"Sutton, Harry"	Male	09/10/2000	Year 09	Mackintosh Mr A Griffiths
+"THOMPSON, Charlie"	Male	13/10/2001	Year 08	Mackintosh Mr A Griffiths
+"Thulborn, Cailean"	Male	20/06/2003	Year 07	Mackintosh Mr A Griffiths
+"TOWSEY, Daniel"	Male	29/09/2001	Year 08	Mackintosh Mr A Griffiths
+"Urquhart-Smith, Jordan"	Male	01/08/2000	Year 10	Mackintosh Mr A Griffiths
+"Vernon, Paddy"	Male	12/07/2003	Year 07	Mackintosh Mr A Griffiths
+"Wade, Will"	Male	05/08/2000	Year 10	Mackintosh Mr A Griffiths
+"White, Sophie"	Female	04/02/2001	Year 09	Mackintosh Mr A Griffiths
+"Woodward, Kyle"	Male	06/11/2002	Year 07	Mackintosh Mr A Griffiths
+Males: 19 Females : 5				
+				
+Registration Group List : Mackintos Mr C Collett as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Brown, Angus Ean"	Male	26/12/2002	Year 07	Mackintos Mr C Collett
+"Carter, Joe"	Male	11/08/2001	Year 09	Mackintos Mr C Collett
+"Corby, Charlie"	Male	23/03/2001	Year 09	Mackintos Mr C Collett
+"Darby, Chelsey"	Female	25/01/2000	Year 10	Mackintos Mr C Collett
+"Desmond, Sam"	Male	11/07/2001	Year 09	Mackintos Mr C Collett
+"Duke, Joanna"	Female	31/07/2000	Year 10	Mackintos Mr C Collett
+"Gowen, Jamie"	Male	06/11/1999	Year 10	Mackintos Mr C Collett
+"Hubbard, Molly"	Female	22/07/2002	Year 08	Mackintos Mr C Collett
+"Jackson, Lena"	Female	29/10/2001	Year 08	Mackintos Mr C Collett
+"Jessop, Bronwyn"	Female	05/06/2003	Year 07	Mackintos Mr C Collett
+"King, Jack"	Male	28/07/2002	Year 08	Mackintos Mr C Collett
+"Lightfoot, Bella"	Female	08/11/2002	Year 07	Mackintos Mr C Collett
+"Merryweather, Peter"	Male	26/07/2002	Year 07	Mackintos Mr C Collett
+"Phillips, Abbie"	Female	12/03/2002	Year 08	Mackintos Mr C Collett
+"Phillips, Joshua"	Male	24/07/2000	Year 10	Mackintos Mr C Collett
+"Pulfrey, Luke"	Male	17/04/2003	Year 07	Mackintos Mr C Collett
+"Railton-Christie, Jasmin"	Female	08/02/2000	Year 10	Mackintos Mr C Collett
+"Santhakumar, Muthushan"	Male	23/07/2001	Year 09	Mackintos Mr C Collett
+"Shepherd, Aaron"	Male	06/10/2000	Year 09	Mackintos Mr C Collett
+"Smith, Tobias"	Male	16/11/1999	Year 10	Mackintos Mr C Collett
+"Stefanski, Marcel"	Male	24/08/2003	Year 07	Mackintos Mr C Collett
+"Traves, Lily"	Female	24/02/2003	Year 07	Mackintos Mr C Collett
+"Vanko, Greg"	Male	06/11/2001	Year 08	Mackintos Mr C Collett
+"Warne, Owen"	Male	25/10/2001	Year 08	Mackintos Mr C Collett
+"Whiting, Tom"	Male	10/09/2001	Year 08	Mackintos Mr C Collett
+"Whitworth, Jordan"	Male	19/03/2001	Year 09	Mackintos Mr C Collett
+"Williamson, Harry"	Male	07/06/2002	Year 08	Mackintos Mr C Collett
+Males: 18 Females : 9				
+				
+Registration Group List : Mackintosh Mrs S Bielby as of 14/04/2015				
+				
+Full Name	Gender	Date of Birth	Year Group	Reg Group
+"Alipio, Peter"	Male	27/12/2000	Year 09	Mackintosh Mrs S Bielby
+"Allen, Sophie"	Female	01/08/2001	Year 09	Mackintosh Mrs S Bielby
+"Armstead, Joshua"	Male	07/08/2000	Year 10	Mackintosh Mrs S Bielby
+"Brown, Dylan"	Male	18/07/2003	Year 07	Mackintosh Mrs S Bielby
+"Davies, Matthew"	Male	03/02/2001	Year 09	Mackintosh Mrs S Bielby
+"Denton, Oliver"	Male	09/12/2002	Year 07	Mackintosh Mrs S Bielby
+"Flower, Bradley"	Male	02/08/2000	Year 10	Mackintosh Mrs S Bielby
+"Godson, Jack"	Male	05/07/2002	Year 08	Mackintosh Mrs S Bielby
+"Hedison, Nathan"	Male	15/03/2000	Year 10	Mackintosh Mrs S Bielby
+"Hewitt, Billy"	Male	05/11/1999	Year 10	Mackintosh Mrs S Bielby
+"Johnson, Elliott"	Male	17/01/2000	Year 10	Mackintosh Mrs S Bielby
+"Kalva, Janis"	Male	15/11/2000	Year 09	Mackintosh Mrs S Bielby
+"Manley, James"	Male	22/02/2000	Year 10	Mackintosh Mrs S Bielby
+"Olah, David"	Male	14/08/2001	Year 08	Mackintosh Mrs S Bielby
+"Perry, Abby"	Female	22/04/2001	Year 09	Mackintosh Mrs S Bielby
+"Pulfrey, Harry"	Male	17/04/2003	Year 07	Mackintosh Mrs S Bielby
+"Pulfrey, Livvy"	Female	30/01/2000	Year 10	Mackintosh Mrs S Bielby
+"Rowland, Luke"	Male	23/09/2001	Year 08	Mackintosh Mrs S Bielby
+"Schaffer, Szabolcs"	Male	26/02/2002	Year 08	Mackintosh Mrs S Bielby
+"Shepherd, Alisha"	Female	24/04/2003	Year 07	Mackintosh Mrs S Bielby
+"Slater, Ben"	Male	20/08/2002	Year 08	Mackintosh Mrs S Bielby
+"Smith, Gina"	Female	29/07/2003	Year 07	Mackintosh Mrs S Bielby
+"Strudwick, Kai"	Male	18/03/2002	Year 08	Mackintosh Mrs S Bielby
+"Wallace, Katie"	Female	12/10/1999	Year 10	Mackintosh Mrs S Bielby
+"Wells, Rhys"	Male	05/04/2002	Year 08	Mackintosh Mrs S Bielby
+"Williams, Sam"	Male	01/11/2000	Year 09	Mackintosh Mrs S Bielby
+Males: 20 Females : 6				
